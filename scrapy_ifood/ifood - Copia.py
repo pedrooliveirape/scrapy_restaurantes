@@ -77,35 +77,38 @@ for i in range(50,60):
     nomeloja = df.iloc[i, 0]
     enderecoweb = df.iloc[i, 2]
     
-    options = Options()
-    options.add_argument('window-size=400,530')
-    options.add_argument('--headless')
-    service = Service(ChromeDriverManager().install())
+    try: # Tentando configurar a página da loja para abertura
+        options = Options()
+        options.add_argument('window-size=400,530')
+        options.add_argument('--headless')
+        service = Service(ChromeDriverManager().install())
 
-    navegador = webdriver.Chrome(service=service, options=options)
-# Abrindo a página
-    navegador.get(f'{enderecoweb}')
-    
-    try: # Tentando scrapy dos GRUPOS DO CARDÁPIO
-        lista_de_grupos = grupos(navegador)
+        navegador = webdriver.Chrome(service=service, options=options)
+    # Abrindo a página
+        navegador.get(f'{enderecoweb}')
+        
+        try: # Tentando scrapy dos GRUPOS DO CARDÁPIO
+            lista_de_grupos = grupos(navegador)
+        except:
+            lista_de_grupos = ['-']
+
+    # Abrindo o VER MAIS
+        try: # Tentando scrapy do SOBRE
+            lista_sobre = sobre(navegador)
+        except:
+            lista_sobre = ['-','-','-','-']
+        
+        try: #Tentando scrapy do HORÁRIO
+            list_dias = horario(navegador)
+        except:
+            list_dias = ['-']
+
+    # Criando a lista que sera do Data Frame    
+        lojas_detalhes.append([nomeloja,enderecoweb,lista_sobre[0],lista_sobre[1],lista_sobre[2],lista_sobre[3],list_dias,lista_de_grupos])
+
+        navegador.close()
     except:
-        lista_de_grupos = ['-']
-
-# Abrindo o VER MAIS
-    try: # Tentando scrapy do SOBRE
-        lista_sobre = sobre(navegador)
-    except:
-        lista_sobre = ['-','-','-','-']
-    
-    try: #Tentando scrapy do HORÁRIO
-        list_dias = horario(navegador)
-    except:
-        list_dias = ['-']
-
-# Criando a lista que sera do Data Frame    
-    lojas_detalhes.append([nomeloja,enderecoweb,lista_sobre[0],lista_sobre[1],lista_sobre[2],lista_sobre[3],list_dias,lista_de_grupos])
-
-    navegador.close()
+        lojas_detalhes.append([nomeloja,enderecoweb,'-','-','-','-','-','-'])
 # Fim do FOR
 dados = pd.DataFrame(lojas_detalhes, columns=['NomeLoja','EnderecoWeb','Endereco','Cidade','CEP','CNPJ','Horario','GrupoCardapio'])
 dados.to_csv('lojas_detalhes_teste.csv', index=False, sep=';')
