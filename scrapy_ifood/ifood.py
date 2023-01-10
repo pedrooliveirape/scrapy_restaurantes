@@ -1,18 +1,23 @@
 from selenium import webdriver
+from webdriver_manager.chrome import ChromeDriverManager
+from selenium.webdriver.chrome.service import Service
+from selenium.webdriver.chrome.options import Options
+from selenium.webdriver.common.by import By
 from time import sleep
+from bs4 import BeautifulSoup
+import pandas as pd
 
-navegador = webdriver.Chrome('C:/workspace/scrapy_ifood/chromedriver.exe')
+df = pd.read_csv('C:\workspace\scrapy_restaurantes\scrapy_ifood\lojas_ifood.csv', sep=';')
+lojas_detalhes = []
+rows = df.shape[0]
 
-navegador.get('https://www.google.com/')
-sleep(5)
-elemento = navegador.find_element(By.XPATH, "/html/body/div[1]/div[3]/form/div[1]/div[1]/div[1]/div/div[2]/input")
-sleep(5)
-elemento.send_keys('selenium no python')
-sleep(5)
+for i in range(1):
+    nomeloja = df.iloc[i, 0]
+    enderecoweb = df.iloc[i, 2]
+    
+    options = Options()
+    options.add_argument('window-size=400,530')
+    service = Service(ChromeDriverManager().install())
 
-#navegador.find_element_by_xpath('//*[@id="__next"]/section[2]/div/form/div/input').send_keys('rua São Francisco de Assis, 110 Cruz de Rebouças, Igarassu')
-
-#sleep(5)
-
-#navegador.find_element_by_xpath('//*[@id="__next"]/section[2]/div/form/button').click()
-
+    navegador = webdriver.Chrome(service=service, options=options)
+    navegador.get(f'{enderecoweb}')
