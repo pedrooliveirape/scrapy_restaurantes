@@ -7,16 +7,6 @@ from time import sleep
 from bs4 import BeautifulSoup
 import pandas as pd
 
-def passofor(rows):
-    inicio_li = []
-    fim_li = []
-
-    for i in range(0,rows,20):
-        inicio_li.append(i)
-        fim_li.append(i+20)
-    fim_li[-1] = rows
-    return [inicio_li, fim_li]
-
 def sobre(navegador):
     navegador.find_element(By.XPATH, '//*[@id="__next"]/div[1]/main/div[1]/div/header[2]/div[1]/div/div[2]/button').click()
     c = 0
@@ -83,45 +73,52 @@ df = pd.read_csv('C:\workspace\scrapy_restaurantes\scrapy_ifood\lojas_ifood.csv'
 dados = pd.DataFrame(columns=['NomeLoja','EnderecoWeb','Endereco','Cidade','CEP','CNPJ','Horario','GrupoCardapio'])
 lojas_detalhes = []
 rows = df.shape[0]
-trange = passofor(rows)
+cont = 0
+   
+for i in range(rows):
+    nomeloja = df.iloc[i, 0]
+    enderecoweb = df.iloc[i, 2]
+    
+    try: # Tentando configurar a página da loja para abertura
+        options = Options()
+        options.add_argument('window-size=400,530')
+        options.add_argument('--headless')
+        service = Service(ChromeDriverManager().install())
 
-for c in range(len(trange[0])):    
-    for i in range(trange[0][c],trange[1][c]):
-        nomeloja = df.iloc[i, 0]
-        enderecoweb = df.iloc[i, 2]
+        navegador = webdriver.Chrome(service=service, options=options)
+    # Abrindo a página
+        navegador.get(f'{enderecoweb}')
         
-        try: # Tentando configurar a página da loja para abertura
-            options = Options()
-            options.add_argument('window-size=400,530')
-            options.add_argument('--headless')
-            service = Service(ChromeDriverManager().install())
-
-            navegador = webdriver.Chrome(service=service, options=options)
-        # Abrindo a página
-            navegador.get(f'{enderecoweb}')
-            
-            try: # Tentando scrapy dos GRUPOS DO CARDÁPIO
-                lista_de_grupos = grupos(navegador)
-            except:
-                lista_de_grupos = ['-']
-
-        # Abrindo o VER MAIS
-            try: # Tentando scrapy do SOBRE
-                lista_sobre = sobre(navegador)
-            except:
-                lista_sobre = ['-','-','-','-']
-            
-            try: #Tentando scrapy do HORÁRIO
-                list_dias = horario(navegador)
-            except:
-                list_dias = ['-']
-
-        # Criando a lista bibliotecas para o Data Frame    
-            lojas_detalhes.append({'NomeLoja': nomeloja,'EnderecoWeb': enderecoweb,'Endereco': lista_sobre[0],'Cidade': lista_sobre[1],'CEP': lista_sobre[2],'CNPJ': lista_sobre[3],'Horario': list_dias,'GrupoCardapio': lista_de_grupos})
-            navegador.close()
+        try: # Tentando scrapy dos GRUPOS DO CARDÁPIO
+            lista_de_grupos = grupos(navegador)
         except:
-            lojas_detalhes.append([nomeloja,enderecoweb,'-','-','-','-','-','-'])
-    # Fim do FOR por loja
-    dados = dados.append(lojas_detalhes, ignore_index=False)
-    dados.to_csv('lojas_detalhes.csv', index=False, sep=';')
-# Fim do FOR por range
+            lista_de_grupos = ['-']
+
+    # Abrindo o VER MAIS
+        try: # Tentando scrapy do SOBRE
+            lista_sobre = sobre(navegador)
+        except:
+            lista_sobre = ['-','-','-','-']
+        
+        try: #Tentando scrapy do HORÁRIO
+            list_dias = horario(navegador)
+        except:
+            list_dias = ['-']
+
+    # Criando a lista bibliotecas para o Data Frame    
+        lojas_detalhes.append({'NomeLoja': nomeloja,'EnderecoWeb': enderecoweb,'Endereco': lista_sobre[0],'Cidade': lista_sobre[1],'CEP': lista_sobre[2],'CNPJ': lista_sobre[3],'Horario': list_dias,'GrupoCardapio': lista_de_grupos})
+        navegador.close()
+    except:
+        lojas_detalhes.append([nomeloja,enderecoweb,'-','-','-','-','-','-'])
+    cont += 1
+    if cont == 5:
+        try:
+            dados = dados.append(lojas_detalhes, ignore_index=False)
+            dados.to_csv('lojas_detalhes_teste.csv', index=False, sep=';')
+            lojas_detalhes = []
+            cont = 0
+        except:
+            cont = 0
+# Fim do FOR por loja
+dados = dados.append(lojas_detalhes, ignore_index=False)
+dados.to_csv('lojas_detalhes_teste.csv', index=False, sep=';')
