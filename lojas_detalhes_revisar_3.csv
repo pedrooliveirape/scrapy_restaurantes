@@ -1,0 +1,31 @@
+NomeLoja;EnderecoWeb;Endereco;Cidade;CEP;CNPJ;Horario;GrupoCardapio
+Pizzaria Mix;https://www.ifood.com.br/delivery/igarassu-pe/pizzaria-mix-cruz-do-reboucas/06e4eed6-8c88-47ba-82c6-37f3c013dccf;"0    -
+Name: Endereco, dtype: object";"0    -
+Name: Cidade, dtype: object";"0    -
+Name: CEP, dtype: object";"0    -
+Name: CNPJ, dtype: object";['Segunda-feira - 14:00 às 23:00', 'Terça-feira - 14:00 às 23:00', 'Quarta-feira - 14:00 às 23:00', 'Quinta-feira - 14:00 às 23:00', 'Sexta-feira - 14:00 às 23:00', 'Sábado - 14:00 às 23:00', 'Domingo - 14:00 às 23:00'];['refrigerante', 'milkshake', 'açaí']
+Evinho Burguer;https://www.ifood.com.br/delivery/igarassu-pe/evinho-burguer-encanto-igarassu/99eb571e-85e9-422b-aa75-be0e1ad03d91;Rua Tente Esquecer, 79 - Encanto Igarassu;Igarassu - PE;53620-095;48.855.685/0001-84;['Segunda-feira - Não abre', 'Terça-feira - Não abre', 'Quarta-feira - 16:45 às 22:15', 'Quinta-feira - 09:30 às 22:00', 'Sexta-feira - 16:00 às 22:00', 'Sábado - 17:45 às 22:15', 'Domingo - 16:45 às 22:15'];['hambúrgueres', 'combos + refrigerante 1lt']
+Açai da Villa;https://www.ifood.com.br/delivery/igarassu-pe/acai-da-villa-santa-rita/d5c7dd59-a6f3-4b92-9fa8-9142adaaed4b;"2    -
+Name: Endereco, dtype: object";"2    -
+Name: Cidade, dtype: object";"2    -
+Name: CEP, dtype: object";"2    -
+Name: CNPJ, dtype: object";['Segunda-feira - Não abre', 'Terça-feira - Não abre', 'Quarta-feira - 17:30 às 22:00', 'Quinta-feira - 17:30 às 22:00', 'Sexta-feira - 17:30 às 22:00', 'Sábado - 17:30 às 22:00', 'Domingo - 17:30 às 22:00'];['açai']
+La Casa de Pastel Hamburgueria & Açaí;https://www.ifood.com.br/delivery/igarassu-pe/la-casa-de-pastel-hamburgueria--acai-agamenon-magalhaes/5290caa2-7ef8-4a41-a940-5559cf73d609;"3    -
+Name: Endereco, dtype: object";"3    -
+Name: Cidade, dtype: object";"3    -
+Name: CEP, dtype: object";"3    -
+Name: CNPJ, dtype: object";['Segunda-feira - Não abre', 'Terça-feira - 17:00 às 23:00', 'Quarta-feira - 17:00 às 23:00', 'Quinta-feira - 17:00 às 23:00', 'Sexta-feira - 17:00 às 23:00', 'Sábado - 17:00 às 23:00', 'Domingo - Não abre'];"['promoo ""cupom de r$10""', 'menu', 'bebidas']"
+Na Chapa Lanchonete;https://www.ifood.com.br/delivery/igarassu-pe/na-chapa-lanchonete-agamenon-magalhaes/925cf89e-e91b-4b1d-b4ad-03e4083a7f85;"4    -
+Name: Endereco, dtype: object";"4    -
+Name: Cidade, dtype: object";"4    -
+Name: CEP, dtype: object";"4    -
+Name: CNPJ, dtype: object";['Segunda-feira - 15:00 às 21:00', 'Terça-feira - 15:00 às 21:00', 'Quarta-feira - 15:00 às 21:00', 'Quinta-feira - 15:00 às 21:00', 'Sexta-feira - 15:00 às 22:00', 'Sábado - 17:00 às 22:00', 'Domingo - 17:00 às 22:00'];['os mais vistados!!', 'hamburguer', 'batata frita', 'combos', 'salgados', 'mini salgados e doces', 'açaí + creme', 'bebidas']
+Lanche Mania;https://www.ifood.com.br/delivery/paulista-pe/lanche-mania-artur-lundgren-ii/c3979b49-6af7-4b3a-bf1e-a4557f7fcd11;Rua Petrolina, 12 - Artur Lundgren Ii;Paulista - PE;53416-680;37.373.386/0001-97;['Segunda-feira - Não abre', 'Terça-feira - 18:00 às 23:00', 'Quarta-feira - 18:00 às 23:00', 'Quinta-feira - 00:00 às 02:00 - 07:00 às 23:59', 'Sexta-feira - 00:00 às 02:00 - 07:00 às 23:59', 'Sábado - 00:00 às 02:00 - 07:00 às 23:59', 'Domingo - Não abre'];['-']
+Senhor Batata;https://www.ifood.com.br/delivery/abreu-e-lima-pe/senhor-batata-caetes-i/483bf29c-f4ac-4ca1-ac18-9303a8ee0e92;"6    -
+Name: Endereco, dtype: object";"6    -
+Name: Cidade, dtype: object";"6    -
+Name: CEP, dtype: object";"6    -
+Name: CNPJ, dtype: object";['Segunda-feira - 10:00 às 22:00', 'Terça-feira - 10:00 às 22:00', 'Quarta-feira - 10:00 às 22:00', 'Quinta-feira - 10:00 às 22:00', 'Sexta-feira - 10:00 às 22:00', 'Sábado - 10:00 às 22:00', 'Domingo - 10:00 às 22:00'];['coxinhas', 'salgados']
+Bom Doce Doce;https://www.ifood.com.br/delivery/paulista-pe/bom-doce-doce-paratibe/86a71283-81d9-4fd8-af5a-812f4a2249a6;Rua do Jasmim, 106 - Paratibe;Paulista - PE;53413-020;35.707.191/0001-00;['Segunda-feira - 09:45 às 22:00', 'Terça-feira - 10:00 às 23:59', 'Quarta-feira - 09:00 às 23:59', 'Quinta-feira - 09:00 às 23:59', 'Sexta-feira - 09:00 às 23:59', 'Sábado - 09:00 às 23:59', 'Domingo - 09:00 às 23:59'];['-']
+Marinana Doces / Picolé Gourmet;https://www.ifood.com.br/delivery/paulista-pe/marinana-doces---picole-gourmet-pau-amarelo/a638b6ec-37ee-4004-82bc-fd6fd9efb9fb;Rua Cecília Carneiro da Silva, 819 - Pau Amarelo;Paulista - PE;53431-135;40.489.326/0001-49;['Segunda-feira - 08:00 às 23:00', 'Terça-feira - 08:00 às 22:30', 'Quarta-feira - 08:00 às 22:30', 'Quinta-feira - 08:00 às 22:30', 'Sexta-feira - 08:00 às 22:30', 'Sábado - 08:00 às 23:30', 'Domingo - 08:00 às 23:30'];['-']
+Cantinho da Maria;https://www.ifood.com.br/delivery/paulista-pe/cantinho-da-maria-pau-amarelo/b52d496b-d1de-4b4c-9fe8-2f405ce64f22;Rua União Soviética, 453 - Pau Amarelo;Paulista - PE;53433-730;42.154.361/0001-32;['Segunda-feira - 08:00 às 23:00', 'Terça-feira - 08:00 às 23:00', 'Quarta-feira - 08:00 às 23:00', 'Quinta-feira - 08:00 às 23:00', 'Sexta-feira - 08:00 às 23:00', 'Sábado - 08:00 às 23:00', 'Domingo - 08:00 às 23:00'];['almoço', 'sobremesa', 'lanches', 'bebidas']

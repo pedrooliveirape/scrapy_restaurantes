@@ -7,16 +7,6 @@ from time import sleep
 from bs4 import BeautifulSoup
 import pandas as pd
 
-def passofor(rows):
-    inicio_li = []
-    fim_li = []
-
-    for i in range(0,rows,20):
-        inicio_li.append(i)
-        fim_li.append(i+20)
-    fim_li[-1] = rows
-    return [inicio_li, fim_li]
-
 def sobre(navegador):
     navegador.find_element(By.XPATH, '//*[@id="__next"]/div[1]/main/div[1]/div/header[2]/div[1]/div/div[2]/button').click()
     c = 0
@@ -78,18 +68,40 @@ def grupos(navegador):
 
     return list_grupos
 
+def revisao(arquivo):
+    df_revisao = arquivo
+    rows_revisao = df_revisao.shape[0]
+    lista_incremento = []
+    df = pd.DataFrame(columns=['NomeLoja','EnderecoWeb','Endereco','Cidade','CEP','CNPJ','Horario','GrupoCardapio'])
 
-df = pd.read_csv('C:\workspace\scrapy_restaurantes\scrapy_ifood\lojas_ifood.csv', sep=';')
+    for i in range(rows_revisao):
+        n_loja = df_revisao.iloc[i, 0]
+        end_web = df_revisao.iloc[i, 1]
+        ende = df_revisao.iloc[i, 2]
+        cida = df_revisao.iloc[i, 3]
+        cep_end = df_revisao.iloc[i, 4]
+        cnpj_loja = df_revisao.iloc[i, 5]
+        hor = df_revisao.iloc[i, 6]
+        g_cardapio = df_revisao.iloc[i, 7]
+
+        if cida == '-' or hor == "['-']" or g_cardapio == "['-']":
+            lista_incremento.append({'NomeLoja': n_loja,'EnderecoWeb': end_web})
+
+    df = df.append(lista_incremento, ignore_index=False)
+
+    return df
+
+
+df_detalhe_revisao = pd.read_csv('C:\workspace\scrapy_restaurantes\lojas_detalhes_revisao.csv', sep=';')
+df = revisao(df_detalhe_revisao)
 dados = pd.DataFrame(columns=['NomeLoja','EnderecoWeb','Endereco','Cidade','CEP','CNPJ','Horario','GrupoCardapio'])
 lojas_detalhes = []
 rows = df.shape[0]
 cont = 0
-#trange = passofor(rows)
-
-#for c in range(len(trange[0])):    
+   
 for i in range(rows):
     nomeloja = df.iloc[i, 0]
-    enderecoweb = df.iloc[i, 2]
+    enderecoweb = df.iloc[i, 1]
     
     try: # Tentando configurar a página da loja para abertura
         options = Options()
@@ -134,4 +146,3 @@ for i in range(rows):
 # Fim do FOR por loja
 dados = dados.append(lojas_detalhes, ignore_index=False)
 dados.to_csv('lojas_detalhes_teste.csv', index=False, sep=';')
-# Fim do FOR por range

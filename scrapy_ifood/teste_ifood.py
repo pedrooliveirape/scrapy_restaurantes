@@ -82,57 +82,70 @@ def scrapypage(nomeloja, enderecoweb):
         try: # Tentando scrapy dos GRUPOS DO CARDÁPIO
             lista_de_grupos = grupos(navegador)
         except:
-            exc_erro = True
             lista_de_grupos = ['-']
 
     # Abrindo o VER MAIS
         try: # Tentando scrapy do SOBRE
             lista_sobre = sobre(navegador)
         except:
-            exc_erro = True
             lista_sobre = ['-','-','-','-']
         
         try: #Tentando scrapy do HORÁRIO
             list_dias = horario(navegador)
         except:
-            exc_erro = True
             list_dias = ['-']
 
     # Criando a lista bibliotecas para o Data Frame    
         navegador.close()
-        navegador.close()
-        return [{'NomeLoja': nomeloja,'EnderecoWeb': enderecoweb,'Endereco': lista_sobre[0],'Cidade': lista_sobre[1],'CEP': lista_sobre[2],'CNPJ': lista_sobre[3],'Horario': list_dias,'GrupoCardapio': lista_de_grupos}, exc_erro]
+        return {'NomeLoja': nomeloja,'EnderecoWeb': enderecoweb,'Endereco': lista_sobre[0],'Cidade': lista_sobre[1],'CEP': lista_sobre[2],'CNPJ': lista_sobre[3],'Horario': list_dias,'GrupoCardapio': lista_de_grupos}
     except:
-        exc_erro = True
-        return [{'NomeLoja': nomeloja,'EnderecoWeb': enderecoweb,'Endereco': '-','Cidade': '-','CEP': '-','CNPJ': '-','Horario': '-','GrupoCardapio': '-'}, exc_erro]
+        return {'NomeLoja': nomeloja,'EnderecoWeb': enderecoweb,'Endereco': '-','Cidade': '-','CEP': '-','CNPJ': '-','Horario': '-','GrupoCardapio': '-'}
 
 
-df = pd.read_csv('C:\workspace\scrapy_restaurantes\scrapy_ifood\lojas_ifood.csv', sep=';')
-dados_comp = pd.DataFrame(columns=['NomeLoja','EnderecoWeb','Endereco','Cidade','CEP','CNPJ','Horario','GrupoCardapio'])
-dados_falha = pd.DataFrame(columns=['NomeLoja','EnderecoWeb','Endereco','Cidade','CEP','CNPJ','Horario','GrupoCardapio'])
+df = pd.read_csv('C:\workspace\scrapy_restaurantes\lojas_detalhes_revisar.csv', sep=',')
+dados_comp = pd.read_csv('C:\workspace\scrapy_restaurantes\lojas_detalhes_bruto.csv', sep=';')
+dados_falha = pd.DataFrame(columns=['NomeLoja','EnderecoWeb'])
 lojas_detalhes = []
 lojas_revisar = []
 rows = df.shape[0]
 cont = 0
    
-for i in range(rows):
+for i in range(15):
     nomeloja = df.iloc[i, 0]
-    enderecoweb = df.iloc[i, 2]
+    enderecoweb = df.iloc[i, 1]
     
     dadosloja = scrapypage(nomeloja, enderecoweb)
 
-    if dadosloja[1] is False:
-        lojas_detalhes.append(dadosloja[0])
+# Inicio teste interação DataFrames --------------
+    if dadosloja['Endereco'] == '-':
+        dadosloja['Endereco'] = df.loc[df.EnderecoWeb==enderecoweb, 'Endereco']
+        dadosloja['Cidade'] = df.loc[df.EnderecoWeb==enderecoweb, 'Cidade']
+        dadosloja['CEP'] = df.loc[df.EnderecoWeb==enderecoweb, 'CEP']
+        dadosloja['CNPJ'] = df.loc[df.EnderecoWeb==enderecoweb, 'CNPJ']
+    if dadosloja['Horario'] == "['-']":
+        dadosloja['Horario'] = df.loc[df.EnderecoWeb==enderecoweb, 'Horario']
+    if dadosloja['GrupoCardapio'] == "['-']":
+        dadosloja['GrupoCardapio'] = df.loc[df.EnderecoWeb==enderecoweb, 'GrupoCardapio']
+# Final teste interação DataFrames --------------
+
+    resp = []
+    for k,i in dadosloja.items():
+        a = str(i)
+        resp.append(a)
+    resp = '-' in ''.join(resp)
+    
+    if resp is True:
+        lojas_revisar.append(dadosloja)
     else:
-        lojas_revisar.append(dadosloja[0])
+        lojas_detalhes.append(dadosloja)
 
     cont += 1
     if cont == 5:
         try:
             dados_comp = dados_comp.append(lojas_detalhes, ignore_index=False)
-            dados_comp.to_csv('lojas_detalhes_bruto.csv', index=False, sep=';')
+            dados_comp.to_csv('lojas_detalhes_bruto_3.csv', index=False, sep=';')
             dados_falha = dados_falha.append(lojas_revisar, ignore_index=False)
-            dados_falha.to_csv('lojas_detalhes_revisar.csv', index=False, sep=';')
+            dados_falha.to_csv('lojas_detalhes_revisar_3.csv', index=False, sep=';')
             lojas_detalhes = []
             lojas_revisar = []
             cont = 0
@@ -140,6 +153,6 @@ for i in range(rows):
             cont = 0
 # Fim do FOR por loja
 dados_comp = dados_comp.append(lojas_detalhes, ignore_index=False)
-dados_comp.to_csv('lojas_detalhes_bruto.csv', index=False, sep=';')
+dados_comp.to_csv('lojas_detalhes_bruto_3.csv', index=False, sep=';')
 dados_falha = dados_falha.append(lojas_revisar, ignore_index=False)
-dados_falha.to_csv('lojas_detalhes_revisar.csv', index=False, sep=';')
+dados_falha.to_csv('lojas_detalhes_revisar_3.csv', index=False, sep=';')
