@@ -10,7 +10,6 @@ import pandas as pd
 df = pd.read_csv('C:\Workspace\scrapy_restaurantes\lojas_detalhes_bruto_nao_apagar.csv', sep=';')
 rows = df.shape[0]
 pizza_df = pd.DataFrame(columns=['NomeLoja','EnderecoWeb'])
-lista_pizza = []
 
 for i in range(rows):
     lista_grupos = df.iloc[i, 7]
@@ -22,7 +21,9 @@ for i in range(rows):
         if 'pizza' in l:
             lista_temp.append(df.iloc[i, 0])
             lista_temp.append(df.iloc[i, 1])
-            lista_pizza.append(lista_temp)
+            linha = pizza_df.shape[0]
+            pizza_df.loc[linha] = lista_temp
 
-pizza_df = pizza_df.append(lista_pizza, ignore_index=False)
+pizza_df.drop_duplicates(subset ="EnderecoWeb", keep = False, inplace = True)
+
 pizza_df.to_csv('lojas_pizza.csv', index=False, sep=';')

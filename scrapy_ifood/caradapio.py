@@ -43,8 +43,8 @@ def abrirproduto(link, nomeproduto):
         lista_itens = []
         for l in list_garnish_choices:
             content_garnish_choices = l.findAll('label', {'class': 'garnish-choices__label'})
-            dict_itens = {}
-            lista_itens.append(dict_itens)
+            itens = []
+            lista_itens.append(itens)
             for i in content_garnish_choices:
                 label_garnish_choices = i
                 try:
@@ -59,7 +59,8 @@ def abrirproduto(link, nomeproduto):
                     precoitem = label_garnish_choices.find('span', {'class': 'garnish-choices__option-price'}).text
                 except:
                     precoitem = '-'
-                dict_itens.update({nomeitem: precoitem})
+                itens.append(nomeitem)
+                itens.append(precoitem)
         precoitensproduto = lista_itens
     else:
         #try:
@@ -70,7 +71,7 @@ def abrirproduto(link, nomeproduto):
             precoitensproduto = site.find('div', {'class': 'dish-price'}).text
         except:
             precoitensproduto = '-'
-    return {nomeproduto: precoitensproduto}
+    return [nomeproduto,precoitensproduto]
 
 def lojacardapio(enderecoweb):
     options = Options()
@@ -78,7 +79,8 @@ def lojacardapio(enderecoweb):
     options.add_argument('--headless')
     service = Service(ChromeDriverManager().install())
 
-    endweb = 'https://www.ifood.com.br/delivery/igarassu-pe/pizza-em-casa-jardim-boa-sorte/ec6a3997-c0d3-4598-9e0c-4c43b4fee1f6'
+    #endweb = 'https://www.ifood.com.br/delivery/igarassu-pe/pizza-em-casa-jardim-boa-sorte/ec6a3997-c0d3-4598-9e0c-4c43b4fee1f6'
+    endweb = enderecoweb
     navegador = webdriver.Chrome(service=service, options=options)
     navegador.get(endweb)
 
@@ -97,3 +99,19 @@ def lojacardapio(enderecoweb):
         lista_produtos_itens.append(produto)
 
     return lista_produtos_itens
+
+
+#df = pd.read_csv('C:\Workspace\scrapy_restaurantes\lojas_pizza.csv')
+#rows = df.shape[0]
+#cardapios_lista = []
+
+#for i in range(rows):
+#    restauranteweb = df.iloc[i, 1]
+#    restaurante_cardapio = lojacardapio(restauranteweb)
+#    cardapios_lista.append(restaurante_cardapio)
+#
+#print()
+
+restauranteweb = 'https://www.ifood.com.br/delivery/igarassu-pe/boa-pizza-express-umbura/360d4e00-0a56-4176-9487-6e12d56405ab'
+restaurante_cardapio = lojacardapio(restauranteweb)
+print(restaurante_cardapio)
