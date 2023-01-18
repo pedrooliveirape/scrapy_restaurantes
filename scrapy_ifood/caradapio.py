@@ -95,23 +95,36 @@ def lojacardapio(enderecoweb):
     lista_produtos_itens = []
 
     for i in produtos_links:
-        produto = abrirproduto(i[0],i[1])
-        lista_produtos_itens.append(produto)
+        sair = False
+        while sair is False: 
+            resposta = input('\033[0;30;47m'+f'ABRIR O PRODUTO {i[1]}? DIGITE S OU N: '+'\033[0;0m')
+            if resposta == 's' or resposta == 'S':
+                produto = abrirproduto(i[0],i[1])
+                lista_produtos_itens.append(produto)
+                sair = True
+            elif resposta == 'n' or resposta == 'N':
+                sair = True
+
 
     return lista_produtos_itens
 
 
-#df = pd.read_csv('C:\Workspace\scrapy_restaurantes\lojas_pizza.csv')
-#rows = df.shape[0]
-#cardapios_lista = []
+df_lojas_pizza = pd.read_csv('C:\Workspace\scrapy_restaurantes\lojas_pizza.csv', sep=';')
+df = pd.DataFrame(columns=['NomeLoja','EnderecoWeb','Cardapio'])
+rows = df_lojas_pizza.shape[0]
 
-#for i in range(rows):
-#    restauranteweb = df.iloc[i, 1]
-#    restaurante_cardapio = lojacardapio(restauranteweb)
-#    cardapios_lista.append(restaurante_cardapio)
-#
-#print()
+for i in range(rows):
+    print(df_lojas_pizza.iloc[i, 0])
+    nomerestaurante = df_lojas_pizza.iloc[i, 0]
+    restauranteweb = df_lojas_pizza.iloc[i, 1]
+    restaurante_cardapio = lojacardapio(restauranteweb)
+    linha = df.shape[0]
+    df.loc[linha] = [nomerestaurante,restauranteweb,restaurante_cardapio]
+    df.to_csv('pizzarias_cardapio.csv', index=False, sep=';')
 
-restauranteweb = 'https://www.ifood.com.br/delivery/igarassu-pe/boa-pizza-express-umbura/360d4e00-0a56-4176-9487-6e12d56405ab'
-restaurante_cardapio = lojacardapio(restauranteweb)
-print(restaurante_cardapio)
+df.drop_duplicates(subset ="EnderecoWeb", keep = False, inplace = True)
+df.to_csv('pizzarias_cardapio.csv', index=False, sep=';')
+
+#restauranteweb = 'https://www.ifood.com.br/delivery/igarassu-pe/boa-pizza-express-umbura/360d4e00-0a56-4176-9487-6e12d56405ab'
+#restaurante_cardapio = lojacardapio(restauranteweb)
+#print(restaurante_cardapio)
