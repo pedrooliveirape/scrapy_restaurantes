@@ -79,7 +79,7 @@ def lojacardapio(enderecoweb):
     options.add_argument('--headless')
     service = Service(ChromeDriverManager().install())
 
-    #endweb = 'https://www.ifood.com.br/delivery/igarassu-pe/pizza-em-casa-jardim-boa-sorte/ec6a3997-c0d3-4598-9e0c-4c43b4fee1f6'
+    #endweb = 'https://www.ifood.com.br/delivery/abreu-e-lima-pe/turma-da-pizza-caetes-ii/c847fcf9-4227-4c28-89df-517e66d44a8b'
     endweb = enderecoweb
     navegador = webdriver.Chrome(service=service, options=options)
     navegador.get(endweb)
@@ -97,13 +97,15 @@ def lojacardapio(enderecoweb):
     for i in produtos_links:
         sair = False
         while sair is False: 
-            resposta = input('\033[0;30;47m'+f'ABRIR O PRODUTO {i[1]}? DIGITE S OU N: '+'\033[0;0m')
+            resposta = input('\033[0;30;47m'+f'ABRIR O PRODUTO [{i[1]}]? DIGITE S OU N:'+'\033[0;0m'+' ')
             if resposta == 's' or resposta == 'S':
                 produto = abrirproduto(i[0],i[1])
                 lista_produtos_itens.append(produto)
                 sair = True
             elif resposta == 'n' or resposta == 'N':
-                sair = True
+                res2 = input('\033[0;31;43m'+'IGNORAR ESTE PRODUTO! CONFIRMAR? DIGITE S OU N:'+'\033[0;0m'+' ').lower()
+                if res2 == 's':
+                    sair = True
 
 
     return lista_produtos_itens
@@ -124,7 +126,3 @@ for i in range(rows):
 
 df.drop_duplicates(subset ="EnderecoWeb", keep = False, inplace = True)
 df.to_csv('pizzarias_cardapio.csv', index=False, sep=';')
-
-#restauranteweb = 'https://www.ifood.com.br/delivery/igarassu-pe/boa-pizza-express-umbura/360d4e00-0a56-4176-9487-6e12d56405ab'
-#restaurante_cardapio = lojacardapio(restauranteweb)
-#print(restaurante_cardapio)
