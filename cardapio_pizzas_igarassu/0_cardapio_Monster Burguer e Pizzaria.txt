@@ -1,0 +1,23 @@
+------------------------------------------------------------
+MONSTER BURGUER E PIZZARIA
+------------------------------------------------------------
+
+[GRANDE  (8 PEDAÇOS)] ---------- [VVVVVVVVVVV]
+          --- GRUPO 1 ---
+          Calabresa  ---------- [48.0]
+          Frango com catupiry  ---------- [59.0]
+          Carne de sol com queijo coalho  ---------- [59.0]
+          Bacon  ---------- [48.0]
+          --- GRUPO 2 ---
+          Massa Massa fina  + Borda Tradicional ---------- [0.0]
+
+[GRANDE  2 SABORES (8 PEDAÇOS)] ---------- [VVVVVVVVVVV]
+          --- GRUPO 1 ---
+          1/2 Calabresa  ---------- [24.0]
+          1/2 Frango com catupiry  ---------- [29.5]
+          1/2 Carne de sol com queijo coalho  ---------- [29.5]
+          1/2 Bacon  ---------- [24.0]
+          --- GRUPO 2 ---
+          Massa Massa fina  + Borda Tradicional ---------- [0.0]
+
+------------------------------------------------------------

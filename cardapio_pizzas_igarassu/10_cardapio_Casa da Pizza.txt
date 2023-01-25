@@ -1,0 +1,29 @@
+------------------------------------------------------------
+CASA DA PIZZA
+------------------------------------------------------------
+HTTPS://WWW.IFOOD.COM.BR/DELIVERY/IGARASSU-PE/CASA-DA-PIZZA-UMBURA/1D71F78D-78B5-43D7-B41D-2A383F0A6569
+------------------------------------------------------------
+
+[GRANDE (8 PEDAÇOS)] ---------- [VVVVVVVVVVV]
+          --- GRUPO 1 ---
+          Pizza de cheddar ---------- [22.0]
+          Presunto c/ cheddar  ---------- [24.0]
+          3 queijos  ---------- [22.0]
+          Catupiry  ---------- [22.0]
+          Presunto  ---------- [22.0]
+          Mussarela  ---------- [22.0]
+          --- GRUPO 2 ---
+          Massa Tradicional + Borda Tradicional ---------- [0.0]
+
+[GRANDE 2 SABORES (8 PEDAÇOS)] ---------- [VVVVVVVVVVV]
+          --- GRUPO 1 ---
+          1/2 Pizza de cheddar ---------- [11.0]
+          1/2 Presunto c/ cheddar  ---------- [12.0]
+          1/2 3 queijos  ---------- [11.0]
+          1/2 Catupiry  ---------- [11.0]
+          1/2 Presunto  ---------- [11.0]
+          1/2 Mussarela  ---------- [11.0]
+          --- GRUPO 2 ---
+          Massa Tradicional + Borda Tradicional ---------- [0.0]
+
+------------------------------------------------------------

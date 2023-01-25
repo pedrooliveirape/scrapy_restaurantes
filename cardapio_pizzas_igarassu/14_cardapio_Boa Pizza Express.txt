@@ -1,3 +1,8 @@
+------------------------------------------------------------
+BOA PIZZA EXPRESS
+------------------------------------------------------------
+https://www.ifood.com.br/delivery/igarassu-pe/boa-pizza-express-umbura/360d4e00-0a56-4176-9487-6e12d56405ab
+------------------------------------------------------------
 
 [PEQ. 25CM (5 PEDAÇOS)] ---------- [VVVVVVVVVVV]
           --- GRUPO 1 ---
@@ -125,4 +130,14 @@
           Italiana (aberta a mão) ---------- [2.0]
           Borda Recheada com Chocolate ao leite ---------- [13.0]
 
-[PEQ (25CM) 2 SABORES (5 PEDAÇOS)] ---------- [0.0]
+[PEQ (25CM) 2 SABORES (5 PEDAÇOS)] ---------- [VVVVVVVVVVV]
+          --- GRUPO 1 ---
+          CHOCOLATE ---------- [13.45]
+          CARTOLA ---------- [13.45]
+          ROMEU & JULIETA ---------- [13.45]
+          --- GRUPO 2 ---
+          Tradional sem borda recheada ---------- [0.0]
+          Italiana (aberta a mão) ---------- [2.0]
+          Borda Recheada com Chocolate ao leite ---------- [13.0]
+
+------------------------------------------------------------

@@ -1,0 +1,61 @@
+------------------------------------------------------------
+PEGGIORE PIZZA
+------------------------------------------------------------
+https://www.ifood.com.br/delivery/igarassu-pe/peggiore-pizza-saramandaia/42ea839b-c03f-4cf4-94a2-0f67e70eacdf
+------------------------------------------------------------
+
+[GRANDE (8 PEDAÇOS)] ---------- [VVVVVVVVVVV]
+          --- GRUPO 1 ---
+          Prestígio ---------- [31.5]
+          Chocolate ---------- [31.5]
+          Brigadeiro ---------- [42.99]
+          Romeu e Julieta ---------- [31.5]
+          Queijo do reino ---------- [46.5]
+          presunto ---------- [29.0]
+          mussarela ---------- [29.0]
+          bacon ---------- [31.5]
+          margherita ---------- [31.5]
+          atum ---------- [42.99]
+          lombinho ---------- [29.0]
+          --- GRUPO 2 ---
+          Massa  tradicional + Borda de catupiry ---------- [6.0]
+          Massa  tradicional + Borda de cheddar ---------- [6.0]
+          Massa  tradicional + Borda sem ---------- [0.0]
+
+[GRANDE 2 SABORES (8 PEDAÇOS)] ---------- [VVVVVVVVVVV]
+          --- GRUPO 1 ---
+          1/2 Prestígio ---------- [15.75]
+          1/2 Chocolate ---------- [15.75]
+          1/2 Brigadeiro ---------- [21.49]
+          1/2 Romeu e Julieta ---------- [15.75]
+          1/2 Queijo do reino ---------- [23.25]
+          1/2 presunto ---------- [14.5]
+          1/2 mussarela ---------- [14.5]
+          1/2 bacon ---------- [15.75]
+          1/2 margherita ---------- [15.75]
+          1/2 atum ---------- [21.49]
+          1/2 lombinho ---------- [14.5]
+          --- GRUPO 2 ---
+          Massa  tradicional + Borda de catupiry ---------- [6.0]
+          Massa  tradicional + Borda de cheddar ---------- [6.0]
+          Massa  tradicional + Borda sem ---------- [0.0]
+
+[GRANDE 3 SABORES (8 PEDAÇOS)] ---------- [VVVVVVVVVVV]
+          --- GRUPO 1 ---
+          1/3 Prestígio ---------- [10.5]
+          1/3 Chocolate ---------- [10.5]
+          1/3 Brigadeiro ---------- [14.33]
+          1/3 Romeu e Julieta ---------- [10.5]
+          1/3 Queijo do reino ---------- [15.5]
+          1/3 presunto ---------- [9.67]
+          1/3 mussarela ---------- [9.67]
+          1/3 bacon ---------- [10.5]
+          1/3 margherita ---------- [10.5]
+          1/3 atum ---------- [14.33]
+          1/3 lombinho ---------- [9.67]
+          --- GRUPO 2 ---
+          Massa  tradicional + Borda de catupiry ---------- [6.0]
+          Massa  tradicional + Borda de cheddar ---------- [6.0]
+          Massa  tradicional + Borda sem ---------- [0.0]
+
+------------------------------------------------------------

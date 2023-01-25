@@ -1,0 +1,99 @@
+------------------------------------------------------------
+PIZZARIA SENSACAO
+------------------------------------------------------------
+https://www.ifood.com.br/delivery/igarassu-pe/pizzaria-sensacao-saramandaia/165f94bf-6e6c-47ca-b76c-de23c51caf20
+------------------------------------------------------------
+
+[Catupiry] ---------- ['6.00']
+
+[Cheddar] ---------- ['6.00']
+
+[Chocolate] ---------- ['10.00']
+
+[Atum] ---------- ['45.90']
+
+[Brigadeiro] ---------- ['40.90']
+
+[Calabresa] ---------- ['40.90']
+
+[Camarão] ---------- ['52.90']
+
+[Cartola] ---------- ['42.90']
+
+[Champignon] ---------- ['56.90']
+
+[Charque] ---------- ['45.90']
+
+[Costela No Bafo] ---------- ['43.90']
+
+[Frango] ---------- ['43.90']
+
+[Frango Catupiry] ---------- ['46.90']
+
+[Frango Com Bacon] ---------- ['45.90']
+
+[Italiana] ---------- ['52.90']
+
+[Lombo Canadensi] ---------- ['48.90']
+
+[Marguerita] ---------- ['43.90']
+
+[Moda Da Casa] ---------- ['64.90']
+
+[Mussarela] ---------- ['40.90']
+
+[Napolitano] ---------- ['40.90']
+
+[Palmito] ---------- ['45.90']
+
+[Pepperoni] ---------- ['45.90']
+
+[Portuguesa] ---------- ['46.90']
+
+[Presunto] ---------- ['40.90']
+
+[Quatro Queijo] ---------- ['45.90']
+
+[Toscana] ---------- ['43.90']
+
+[Atum e Brocolis] ---------- ['49.90']
+
+[Brocolis Especial] ---------- ['49.90']
+
+[Brocolis] ---------- ['40.90']
+
+[Calabresa C/ Cream cheese] ---------- ['50.90']
+
+[Fango C/ Cream cheese] ---------- ['53.90']
+
+[Presunto C/ Creme cheese] ---------- ['50.90']
+
+[Atum C/ Cream cheese] ---------- ['55.90']
+
+[Camarão C/ Cream cheese] ---------- ['62.90']
+
+[Frango C/ Bacon e Creme Cheese] ---------- ['55.90']
+
+[Palmito C/ Cream cheese] ---------- ['55.90']
+
+[Bacon C/ Cream Cheese] ---------- ['50.90']
+
+[Charque C/ Cream Cheese] ---------- ['55.90']
+
+[Pepperoni C/ Cream Cheese] ---------- ['55.90']
+
+[Lombo Canadense C/ Cream cheese] ---------- ['58.90']
+
+[Italiana C/ Cream Cheese] ---------- ['62.90']
+
+[Brocolis C/ Cream Cheese] ---------- ['50.90']
+
+[Mussarela C/ Cream cheese] ---------- ['50.90']
+
+[Calabresa C/ Bacon] ---------- ['47.90']
+
+[Charque C/ Bacon] ---------- ['52.90']
+
+[Costela C/ Bacon] ---------- ['50.90']
+
+------------------------------------------------------------

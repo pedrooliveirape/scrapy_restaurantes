@@ -1,0 +1,33 @@
+------------------------------------------------------------
+CAPITAL DO SABOR
+------------------------------------------------------------
+
+[Moda da casa + guarana Antártica de 1l] ---------- ['45.00']
+
+[Pizza Calabresa com 3 queijo + guarana Antártica de 1 litro] ---------- ['35.00']
+
+[Pizza 3 queijo tamanho G 8 fatias + guarana Antártica de 1l] ---------- ['35.00']
+
+[Pizza calabresa tamanho G 8 fatias + guarana Antártica de 1l] ---------- ['35.00']
+
+[Pizza portuguesa tamanho G 8 fatias + guarana Antártica de 1l] ---------- ['40.00']
+
+[Pizza mussarela tamanho G 8 fatias + guarana Antártica de 1l] ---------- ['34.00']
+
+[Pizza frango catupyri tamanho G 8 fatias + guarana Antártica de 1l] ---------- ['40.00']
+
+[Pizza Calabresa com mussarela + guarana Antártica de 1 litro] ---------- ['35.00']
+
+[Pizza Três queijo + mussarela + guarana Antártica de 1 litros] ---------- ['35.00']
+
+[Pizza Meio charque meio frango + guarana Antártica de 1l] ---------- ['45.00']
+
+[Pizza frango com cheddar + guarana Antártica de 1l] ---------- ['40.00']
+
+[Pizza pressinto + guarana Antártica de 1l] ---------- ['38.00']
+
+[Pizza charque + guarana Antártica de 1l] ---------- ['45.00']
+
+[Pizza frango + guarana Antártica de 1l] ---------- ['38.00']
+
+------------------------------------------------------------

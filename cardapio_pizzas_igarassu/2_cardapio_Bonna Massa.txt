@@ -1,0 +1,94 @@
+------------------------------------------------------------
+BONNA MASSA
+------------------------------------------------------------
+
+[GRANDE (8 PEDAÇOS)] ---------- [VVVVVVVVVVV]
+          --- GRUPO 1 ---
+          Milho ---------- [29.9]
+          Mussarela ---------- [35.0]
+          Tomatella ---------- [35.0]
+          Dois Queijos ---------- [36.0]
+          3 Queijos ---------- [36.0]
+          4 Queijos ---------- [36.0]
+          Baiana ---------- [37.0]
+          Bauru ---------- [37.0]
+          Moda do Cheff ---------- [38.0]
+          Calabresa com B.B.Q ---------- [38.0]
+          CalaMu ---------- [38.0]
+           Calabresa ---------- [38.0]
+          Calabresa C/ Catupiry  ---------- [38.0]
+          Frango ---------- [38.0]
+          Frango com B.B.Q ---------- [38.0]
+          Frango com Cheddar ---------- [38.0]
+           Frango Com Requeijão ---------- [38.0]
+          Frango Catupiry ---------- [38.0]
+          Frango com Cream Cheese ---------- [39.0]
+          Frango Caipira ---------- [39.0]
+          Salame ---------- [39.0]
+          Catuperone ---------- [39.0]
+          Pepperoni ---------- [39.0]
+          Camarão ---------- [48.0]
+          Camarão C/ Cheddar  ---------- [48.0]
+          Camarão c/ Catupiry ---------- [48.0]
+          Camarão C/ Cream Cheese ---------- [48.0]
+          --- GRUPO 2 ---
+          Massa Tradicional + Borda Tradicional ---------- [0.0]
+
+[GRANDE 2 SABORES (8 PEDAÇOS)] ---------- [VVVVVVVVVVV]
+          --- GRUPO 1 ---
+          1/2 Milho ---------- [14.95]
+          1/2 Mussarela ---------- [17.5]
+          1/2 Tomatella ---------- [17.5]
+          1/2 Dois Queijos ---------- [18.0]
+          1/2 3 Queijos ---------- [18.0]
+          1/2 4 Queijos ---------- [18.0]
+          1/2 Baiana ---------- [18.5]
+          1/2 Bauru ---------- [18.5]
+          1/2 Moda do Cheff ---------- [19.0]
+          1/2 Calabresa com B.B.Q ---------- [19.0]
+          1/2 CalaMu ---------- [19.0]
+          1/2  Calabresa ---------- [19.0]
+          1/2 Calabresa C/ Catupiry  ---------- [19.0]
+          1/2 Frango ---------- [19.0]
+          1/2 Frango com B.B.Q ---------- [19.0]
+          1/2 Frango com Cheddar ---------- [19.0]
+          1/2  Frango Com Requeijão ---------- [19.0]
+          1/2 Frango Catupiry ---------- [19.0]
+          1/2 Frango com Cream Cheese ---------- [19.5]
+          1/2 Frango Caipira ---------- [19.5]
+          1/2 Salame ---------- [19.5]
+          1/2 Catuperone ---------- [19.5]
+          1/2 Pepperoni ---------- [19.5]
+          1/2 Camarão ---------- [24.0]
+          1/2 Camarão C/ Cheddar  ---------- [24.0]
+          1/2 Camarão c/ Catupiry ---------- [24.0]
+          1/2 Camarão C/ Cream Cheese ---------- [24.0]
+          --- GRUPO 2 ---
+          Massa Tradicional + Borda Tradicional ---------- [0.0]
+
+[Pizza Grande + Refri De 1 Litro] ---------- [VVVVVVVVVVV]
+          --- GRUPO 1 ---
+          Mussarela ---------- [42.0]
+          Calabresa ---------- [42.0]
+          Três queijos ---------- [42.0]
+          --- GRUPO 2 ---
+          Antarctica ---------- [0.0]
+          Sukita laranja ---------- [0.0]
+          Soda ---------- [0.0]
+
+[Pizza De Mussarela + Refri 1l] ---------- ['37.00']
+
+[Clone] ---------- [VVVVVVVVVVV]
+          --- GRUPO 1 ---
+          Mussarela ---------- [60.0]
+          3 Queijos ---------- [60.0]
+
+[Clone de Pizza de Calabresa] ---------- ['65.00']
+
+[3 Pizza + Fanta 2 Litros] ---------- ['111.99']
+
+[Pizza de Frango Caipira + Fanta 2l] ---------- ['49.00']
+
+[Pizza de Camarão + Coca Cola 2 Lt] ---------- ['58.00']
+
+------------------------------------------------------------
